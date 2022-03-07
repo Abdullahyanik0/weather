@@ -4,6 +4,7 @@ import { usePosition } from "use-position";
 import HavaDurumu from "./components/HavaDurumu";
 import React  from 'react';
 
+
 const App = () => {
   const [weather, setWeather] = useState();
   const { latitude, longitude } = usePosition();
@@ -29,7 +30,7 @@ const App = () => {
   return (
     <div>
       <h2>Hava Durumu</h2>
-      <HavaDurumu weather={weather} />
+      <div className="weather"><HavaDurumu weather={weather} /></div>
     </div>
   );
 };
